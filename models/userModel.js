@@ -8,7 +8,11 @@ const userSchema = new mongoose.Schema(
 
           email: { type: String, required: true, unique: true },
           password: { type: String, required: true ,minLength:6},
-
+          roles: {
+            type: String,
+            enum: ['admin', 'user'],
+            default: 'user',
+          },
   },
 
 )

@@ -4,6 +4,8 @@ const User = require("../models/userModel");
 const asyncHandler = require("express-async-handler");
 
 const generateToken = require('../config/jwtToken');
+
+
 const registerAUser = asyncHandler(async(req,res)=>{
   //Get the email from req.body and find whether a user with this email exists or not
 
